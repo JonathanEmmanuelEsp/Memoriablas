@@ -1,0 +1,307 @@
+/* Card color themes by table and side */
+.kids-card-left-t2 .kids-card-front { background: linear-gradient(135deg, #f9d29d 0%, #e7a977 100%); color: #7c4a03; }
+.kids-card-right-t2 .kids-card-front { background: linear-gradient(135deg, #ffe066 0%, #ffd700 100%); color: #a67c00; }
+.kids-card-left-t3 .kids-card-front { background: linear-gradient(135deg, #fffde4 0%, #ffe082 100%); color: #bfa000; }
+.kids-card-right-t3 .kids-card-front { background: linear-gradient(135deg, #e1bee7 0%, #b39ddb 100%); color: #6a1b9a; }
+.kids-card-left-t4 .kids-card-front { background: linear-gradient(135deg, #b3e5fc 0%, #4fc3f7 100%); color: #01579b; }
+.kids-card-right-t4 .kids-card-front { background: linear-gradient(135deg, #ffe0b2 0%, #ffb74d 100%); color: #e65100; }
+.kids-card-left-t5 .kids-card-front { background: linear-gradient(135deg, #f8bbd0 0%, #f06292 100%); color: #ad1457; }
+.kids-card-right-t5 .kids-card-front { background: linear-gradient(135deg, #b2ebf2 0%, #4dd0e1 100%); color: #006064; }
+.kids-card-left-t6 .kids-card-front { background: linear-gradient(135deg, #c8e6c9 0%, #81c784 100%); color: #1b5e20; }
+.kids-card-right-t6 .kids-card-front { background: linear-gradient(135deg, #ffe082 0%, #ffd54f 100%); color: #ff6f00; }
+.kids-card-left-t7 .kids-card-front { background: linear-gradient(135deg, #90caf9 0%, #1976d2 100%); color: #fff; }
+.kids-card-right-t7 .kids-card-front { background: linear-gradient(135deg, #ffccbc 0%, #ff7043 100%); color: #bf360c; }
+.kids-card-left-t8 .kids-card-front { background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%); color: #6a1b9a; }
+.kids-card-right-t8 .kids-card-front { background: linear-gradient(135deg, #ffe0e0 0%, #ffb6b6 100%); color: #d84315; }
+.kids-card-left-t9 .kids-card-front { background: linear-gradient(135deg, #ffe082 0%, #ffd54f 100%); color: #ff6f00; }
+.kids-card-right-t9 .kids-card-front { background: linear-gradient(135deg, #fffde4 0%, #ffe082 100%); color: #bfa000; }
+.kids-card-left-t10 .kids-card-front { background: linear-gradient(135deg, #b2dfdb 0%, #4db6ac 100%); color: #004d40; }
+.kids-card-right-t10 .kids-card-front { background: linear-gradient(135deg, #fffde4 0%, #ffe082 100%); color: #ffb300; }
+/* Game Board & Cards (App.jsx) */
+.kids-app {
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+  padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  background: #e0f7fa;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px #4f8cff33;
+  text-align: center;
+  border: 4px dashed #4f8cff;
+}
+.kids-controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.kids-label {
+  font-size: 1.2rem;
+  color: #4f8cff;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+.kids-select {
+  font-size: 1.1rem;
+  border-radius: 16px;
+  border: 2px solid #ffb347;
+  padding: 0.5rem 1.2rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  background: #fff;
+  color: #4f8cff;
+  outline: none;
+  box-shadow: 0 2px 8px #4f8cff22;
+  transition: border 0.2s;
+}
+.kids-select:focus {
+  border: 2px solid #ff5e62;
+}
+.kids-score {
+  font-size: 1.3rem;
+  color: #ff5e62;
+  margin-bottom: 1.5rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+.kids-board {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1rem;
+
+}
+.kids-cards-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+}
+.kids-card {
+  width: 110px;
+  height: 140px;
+  perspective: 800px;
+  cursor: pointer;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px #4f8cff33;
+  background: #fff;
+  border: 3px solid #ffb347;
+  position: relative;
+  transition: transform 0.2s;
+}
+.kids-card-left {
+  border-color: #ffb347;
+}
+.kids-card-right {
+  border-color: #4f8cff;
+}
+.kids-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.kids-card-flipped .kids-card-inner {
+  transform: rotateY(180deg);
+}
+.kids-card-front, .kids-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  border-radius: 24px;
+}
+.kids-card-front {
+  background: linear-gradient(135deg, #ffb347 0%, #ff5e62 100%);
+  color: #fff;
+  font-size: 2.7rem;
+}
+.kids-card-back {
+  background: linear-gradient(135deg, #4f8cff 0%, #00e6d3 100%);
+  color: #fffde4;
+  transform: rotateY(180deg);
+  font-size: 2.1rem;
+}
+.kids-congrats {
+  margin-top: 2rem;
+  background: #fff176;
+  color: #ff5e62;
+  font-size: 1.5rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  border-radius: 24px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 12px #ffb34733;
+  border: 2px solid #ffb347;
+}
+/* Basic styles for login and home */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  font-family: 'Fredoka One', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe6fa 0%, #e0f7fa 100%);
+}
+
+/* Header */
+.header-kids {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  color: #fff;
+  margin-bottom: 2rem;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 16px rgba(255, 204, 51, 0.15);
+}
+.header-logo {
+  font-size: 2rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #ffb347, 4px 4px 0 #fff176;
+  user-select: none;
+}
+.header-title {
+  font-size: 2.2rem;
+  color: #fffde4;
+  margin: 0 0.3rem;
+}
+.header-user {
+  font-size: 1.1rem;
+  margin-right: 1rem;
+  color: #fffde4;
+}
+.header-logout {
+  background: #ff5e62;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffb34744;
+  transition: background 0.2s;
+}
+.header-logout:hover {
+  background: #ff1744;
+}
+
+/* Home */
+.kids-home {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  background: #fffde4;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px #ffb34733;
+  text-align: center;
+  border: 4px dashed #ffb347;
+}
+.kids-title {
+  font-size: 2.3rem;
+  color: #ff5e62;
+  margin-bottom: 1.2rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.kids-desc {
+  font-size: 1.2rem;
+  color: #ff9800;
+  margin-bottom: 2.2rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+.kids-play-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(90deg, #4f8cff 0%, #00e6d3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #4f8cff33;
+  transition: background 0.2s;
+}
+.kids-play-btn:hover {
+  background: linear-gradient(90deg, #00e6d3 0%, #4f8cff 100%);
+}
+
+/* Login */
+.kids-login {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 2.5rem 2rem 2.5rem 2rem;
+  background: #fffde4;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px #4f8cff33;
+  text-align: center;
+  border: 4px dashed #4f8cff;
+}
+.kids-form {
+  margin-bottom: 1.5rem;
+}
+.kids-input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.9rem;
+  border-radius: 16px;
+  border: 2px solid #ffb347;
+  font-size: 1.1rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  background: #fff;
+  color: #ff5e62;
+  outline: none;
+  box-shadow: 0 2px 8px #ffb34722;
+  transition: border 0.2s;
+}
+.kids-input:focus {
+  border: 2px solid #4f8cff;
+}
+.kids-btn {
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, #ff5e62 0%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #ff5e6233;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.kids-btn:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #ff5e62 100%);
+}
+.kids-switch-btn {
+  margin-top: 1rem;
+  background: #fff176;
+  color: #ff5e62;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffb34733;
+  transition: background 0.2s;
+}
+.kids-switch-btn:hover {
+  background: #ffe082;
+}
+.kids-error {
+  color: #d32f2f;
+  margin-top: 0.5rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}
+.kids-success {
+  color: #388e3c;
+  margin-top: 0.5rem;
+  font-family: 'Fredoka One', Arial, sans-serif;
+}

@@ -1,0 +1,43 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.cards-left, .cards-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 4px;
+  background: #2196f3;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.card.flipped {
+  background: #4caf50;
+}
+
+
+/* Añadir en tu index.css para flip animation */
+.perspective {
+  perspective: 1000px;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}

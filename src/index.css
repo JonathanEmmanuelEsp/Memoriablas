@@ -1,0 +1,107 @@
+/* Tipografía divertida para toda la app */
+.app {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d63031;
+}
+
+.controls {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+select {
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.score {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100px;
+  height: 60px;
+  margin: 5px;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #74b9ff;
+  color: #fff;
+}
+
+.card-back {
+  background-color: #55efc4;
+  color: #2d3436;
+  transform: rotateY(180deg);
+}
+
+.congrats {
+  font-size: 1.5rem;
+  color: #00b894;
+  margin: 20px 0;
+}
+
+.congrats button {
+  font-size: 1rem;
+  padding: 8px 16px;
+  background: #d63031;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    flex-direction: column;
+    align-items: center;
+  }
+}
