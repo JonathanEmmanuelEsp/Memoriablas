@@ -1,3 +1,51 @@
+@media (max-width: 600px) {
+  .kids-login, .kids-home {
+    max-width: 98vw;
+    margin: 0.5rem auto;
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    box-shadow: none;
+    border-width: 2px;
+  }
+  .kids-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .kids-desc {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .kids-form {
+    margin-bottom: 1rem;
+  }
+  .kids-input {
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+  }
+  .kids-btn, .kids-play-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+  }
+  .kids-switch-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+  .header-kids {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 0 0 16px 16px;
+  }
+  .error, .success {
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+  }
+}
 /* Responsive design for mobile */
 @media (max-width: 600px) {
   .kids-app {
