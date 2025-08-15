@@ -1,3 +1,55 @@
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+  .kids-app {
+    max-width: 100vw;
+    margin: 0;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+    border-radius: 0;
+    box-shadow: none;
+    border-width: 2px;
+  }
+  .kids-board {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .kids-cards-column {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .kids-card {
+    width: 80px;
+    height: 100px;
+    font-size: 1.2rem;
+  }
+  .kids-title {
+    font-size: 1.3rem;
+  }
+  .kids-login, .kids-home {
+    max-width: 98vw;
+    margin: 0.5rem auto;
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    box-shadow: none;
+    border-width: 2px;
+  }
+  .header-kids {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border-radius: 0 0 16px 16px;
+  }
+  .kids-btn, .kids-play-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+  }
+  .kids-input {
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-radius: 10px;
+  }
+}
 /* Card color themes by table and side */
 .kids-card-left-t2 .kids-card-front { background: linear-gradient(135deg, #f9d29d 0%, #e7a977 100%); color: #7c4a03; }
 .kids-card-right-t2 .kids-card-front { background: linear-gradient(135deg, #ffe066 0%, #ffd700 100%); color: #a67c00; }
