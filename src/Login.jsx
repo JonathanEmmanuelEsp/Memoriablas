@@ -53,7 +53,7 @@ export default function Login() {
       <Header />
       <div className="login-container kids-login">
         <h2 className="kids-title">
-          {isRegister ? "¡Crea tu cuenta! 📝" : "¡Bienvenido! 🦄"}
+          {isRegister ? "¡Crea tu cuenta! 📝" : "¡BienvenidoS! 🦄"}
         </h2>
         <form onSubmit={handleSubmit} className="kids-form">
           <input

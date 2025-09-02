@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import "./login-home.css";
+import Ranking from "./components/Ranking";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export default function Home() {
         </p>
         <button className="kids-play-btn" onClick={() => navigate("/jugar")}>¡Jugar ahora!</button>
       </div>
+    <Ranking />
     </>
   );
 }

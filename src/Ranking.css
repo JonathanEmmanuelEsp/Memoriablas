@@ -1,0 +1,24 @@
+.ranking-container {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 400px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ranking-table th, .ranking-table td {
+  padding: 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+.ranking-table th {
+  background: #e3e3e3;
+}
+.top-user {
+  background: #ffe066;
+  font-weight: bold;
+}
